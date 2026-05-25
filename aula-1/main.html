@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt">
   <head>
-    <title>Twitter · Tailwind</title>
+    <title>Twitter</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -14,6 +14,7 @@
       <div class="flex gap-2 mb-5">
         <input
           type="text"
+          id="new-post"
           placeholder="O que está pensando?"
           class="flex-1 bg-black text-white border border-gray-700 rounded-md px-3 py-2 text-base focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
         />
@@ -21,22 +22,14 @@
           type="button"
           value="Publicar"
           class="bg-blue-500 hover:bg-blue-600 text-white font-medium px-5 py-2 rounded-md cursor-pointer transition-colors"
+          onclick="feed.addNewPost()"
         />
       </div>
 
       <!-- FEED -->
-      <ul class="space-y-2">
-        <li
-          class="bg-black text-white border border-gray-700 rounded-lg p-3 flex items-center justify-between gap-2"
-        >
-          <span class="text-base">Neymar na copa !!!</span>
-          <button
-            class="bg-red-600 hover:bg-red-700 text-white text-sm px-2.5 py-1 rounded-md transition-colors"
-          >
-            🗑️
-          </button>
-        </li>
+      <ul class="space-y-2" id="feed">
       </ul>
     </div>
   </body>
+  <script src="main.js"></script>
 </html>
