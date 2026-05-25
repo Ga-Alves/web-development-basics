@@ -2,7 +2,7 @@ import express from "express"
 
 const postsRouter = express.Router()
 
-var posts = ["Neymar fora da copa?"];
+var posts = ["Neymar fora da copa???"];
 
 postsRouter.use((req, res, next) => {
   console.log(`A request was made to ${req.method} ${req.baseUrl}`)

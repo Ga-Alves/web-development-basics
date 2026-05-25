@@ -50,6 +50,9 @@ Por fin, modifique em `package.json` o tipo do pacote.
 ```json
 "type": "module",
 ```
+### Async functions
+
+Introduzir Async funcitons.
 
 ## Testar primeira requisição HTTP
 
