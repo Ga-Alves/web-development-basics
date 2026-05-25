@@ -1,33 +1,62 @@
 ## Setup
 
+Antes de começar, verifique se instalou a versão correta do node.
+
 ```bash
 node --version
 ```
+
 v24.14.1
 
+Depois, inicialize o projeto com o comando
 
-Inicializa projeto node
 ```bash
 npm init -y
 ```
 
+Este comando ira gerar o arquivo `package.json`.
 
-Installa dependencias de desenvolvimento
+Depois, será necessário instalar as dependências de desenvolvimento (typescript e tipagem do node.js).
+
 ```bash
 npm install -D typescript @types/node
 ```
 
+## Configurar Typescript
 
-Cria tsconfig
+O javascript é uma linguagem de tipagem fraca. Para evitar erros relacionado a tipagem adicionamos uma camada de tipagem no JS conhecida como TS.
+
+Execute o comando
+
 ```bash
 npx tsc --init
 ```
 
+para gerar o arquivo de configuração do Typescript e depois altere o `tsconfig.json` editando as seguintes configurações.
 
-Setup tsconfig with
-https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping
+```json
+{
+  "compilerOptions": {
+    "lib": ["ES2024"],
+    "module": "nodenext",
+    "target": "ES2024",
+    "verbatimModuleSyntax": false
+  }
+}
+```
 
-change the package.json
+Por fin, modifique em `package.json` o tipo do pacote.
 
+```json
 "type": "module",
+```
 
+## Testar primeira requisição HTTP
+
+Para rodar o server basta executar
+
+```bash
+node ./src/server.ts
+```
+
+Depois abra a página http://localhost:3000/. Você deve ver uma mensagem de Hello World!.
