@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Post from "./components/post/post";
 
 export default function App() {
   const [posts, setPosts] = useState(["Neymar na copa !!!"]);
@@ -38,18 +39,7 @@ export default function App() {
       {/* FEED */}
       <ul className="space-y-2">
         {posts.map((post, index) => (
-          <li
-            key={index}
-            className="bg-black text-white border border-gray-700 rounded-lg p-3 flex items-center justify-between gap-2"
-          >
-            <span className="text-base">{post}</span>
-            <button
-              onClick={() => deletePost(index)}
-              className="bg-red-600 hover:bg-red-700 text-white text-sm px-2.5 py-1 rounded-md transition-colors"
-            >
-              🗑️
-            </button>
-          </li>
+          <Post content={post} deletePost={() => deletePost(index)} />
         ))}
       </ul>
     </div>
