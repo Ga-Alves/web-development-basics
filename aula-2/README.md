@@ -71,3 +71,9 @@ app.use(express.json());
 
 ## Criar router
 
+Codigo em um so arquivo nao eh muito escalavel.
+Vamos separar por contextos com routers.
+
+## Adicionar um middleware apenas para o router
+
+Adicione um middleware de log para o router.

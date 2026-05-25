@@ -4,6 +4,12 @@ const postsRouter = express.Router()
 
 var posts = ["Neymar fora da copa?"];
 
+postsRouter.use((req, res, next) => {
+  console.log(`A request was made to ${req.method} ${req.baseUrl}`)
+  next()
+})
+
+
 postsRouter.get("", (_, res) => {
   res.send(posts);
 });
