@@ -27,4 +27,7 @@ npx tsc --init
 Setup tsconfig with
 https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping
 
+change the package.json
+
+"type": "module",
 
