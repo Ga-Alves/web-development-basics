@@ -60,3 +60,14 @@ node ./src/server.ts
 ```
 
 Depois abra a página http://localhost:3000/. Você deve ver uma mensagem de Hello World!.
+
+## Parse de json
+Teste fazer uma requisicao POST com json no body sem utilizar o parser de json.
+
+Depois adicione o parser
+```bash
+app.use(express.json());
+```
+
+## Criar router
+
